@@ -1,0 +1,275 @@
+@charset "UTF-8";
+@import "reset.css";
+@import "base.css";
+@import "all.min.css";
+
+#all-wrap {
+  position: fixed;
+  width: 100%;
+  min-width: 1200px;
+  height: 100%;
+  min-height: 960px;
+  overflow: hidden;
+  background: url(../img/bg.png) no-repeat bottom / cover;
+}
+
+h1 {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+  z-index: 3;
+}
+
+h1 img {
+  width: 300px;
+}
+
+.menu {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  z-index: 3;
+  background: none;
+  font-size: 30px;
+  color: #d00;
+  cursor: pointer;
+}
+
+.menu:hover {
+  color: #333;
+}
+
+/* title-box */
+.title-box {
+  position: absolute;
+  left: 100px;
+  top: calc(50% - 100px);
+  z-index: 1;
+}
+
+.title-box h2 {
+  color: #fff;
+  font-size: 50px;
+  text-shadow:
+    2px 2px 3px rgba(0, 0, 0, 0.7),
+    0 0 15px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+
+.title-box h2 span {
+  color: #d00;
+}
+
+.title-box .sns-wrap {
+  margin-top: 30px;
+}
+
+.title-box .sns-wrap a {
+  font-size: 45px;
+  opacity: 0.5;
+  padding: 3px;
+}
+
+.title-box .sns-wrap a:hover {
+  opacity: 1;
+}
+
+/* footer */
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 45px;
+  line-height: 45px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  color: #ccc;
+  font-size: 0.8em;
+  z-index: 1;
+}
+
+footer .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  margin: auto;
+}
+
+footer .fnb {
+  display: flex;
+}
+
+footer .fnb a {
+  display: block;
+  padding: 0 25px;
+  transition: all 0.3s;
+}
+
+footer .fnb a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+footer .fnb a:first-child {
+  background-color: rgba(247, 18, 18, 0.568);
+}
+
+footer address a {
+  color: #d00;
+}
+
+footer address a:hover {
+  color: rgb(231, 29, 29);
+}
+
+/* 동영상 배경 메뉴 */
+.vid-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vid-wrap article {
+  position: relative;
+  width: 12%;
+  height: 100%;
+  overflow: hidden;
+  background: url(../img/divider.png) no-repeat left 20% / 1px 70%;
+  cursor: url(../img/mouse1.png), auto; /* 마우스 커서 변경 */
+}
+
+.vid-wrap h3 {
+  position: absolute;
+  left: 10px;
+  right: 0;
+  top: 300px;
+  border-left: 5px solid #555;
+  padding-left: 10px;
+  transition: all 0.3s;
+}
+
+.vid-wrap h3::after {
+  content: '클릭!';
+  text-align: right;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: -15px;
+  right: 0;
+  top: 8px;
+  height: 0px;
+  line-height: 50px;
+  opacity: 0;
+  font-size: 0.8em;
+  padding-right: 30px;
+  color: #0af;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.3s;
+}
+
+.vid-wrap article:hover h3::after {
+  opacity: 1;
+  top: -15px;
+  height: 50px;
+}
+
+.vid-wrap article:hover h3 {
+  color: #fff;
+  border-color: #0af;
+}
+
+.vid-wrap article:hover h3::after {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+}
+
+.vid-wrap video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  height: 100%;
+  opacity: 0.9;
+  display: none;
+}
+
+.vid-wrap h4 {
+  position: absolute;
+  right: -230px;
+  bottom: 320px;
+  width: 220px;
+  text-align: right;
+  color: #fff;
+  text-shadow: 1px 1px 2px #333;
+}
+
+.vid-wrap h4+p {
+  position: absolute;
+  right: -230px;
+  bottom: 150px;
+  width: 220px;
+  height: 150px;
+  font-size: 0.9em;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  word-spacing: 1px;
+  text-align: right;
+  color: #999;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal .close-btn {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  background: none;
+  color: #777;
+  font-size: 5vw;
+  cursor: pointer;
+  text-shadow: 10px 10px 30px #000;
+}
+
+.modal .close-btn:hover {
+  color: #ccc;
+}
+
+.modal .vid-cont {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 400px;
+  height: 710px;
+  margin: auto;
+}
+
+.modal .vid-cont video {
+  position: absolute;
+  width: 100%;  /* 비디오 추가시 안전 장치 */
+}
+
+.modal {
+  display: none;
+}
+
+.modal .vid-cont video {
+  display: none;
+}

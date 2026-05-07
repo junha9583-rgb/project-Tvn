@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Noto;
+  src: url(font/NotoSansKR-Light.otf);
+}
+@font-face {
+  font-family: Nice;
+  src: url(font/잘풀리는하루-Medium.ttf);
+}
+
+body {font: large Nice;}
